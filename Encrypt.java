@@ -7,17 +7,17 @@ public class Encrypt {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
-		String s1 = s.nextLine();
-		String s2 = s.nextLine();
-		char c[] = s2.toCharArray();
-		for(int i=0;i<s1.length();i++)
+		String str1 = s.nextLine();
+		String str2 = s.nextLine();
+		char ch[] = str2.toCharArray();
+		for(int i=0;i<str1.length();i++)
 		{
-			int a=(int)s1.charAt(i)+10;
+			int a=(int)str1.charAt(i)+10;
 			System.out.print((char)a);
 		}System.out.print(" ");
-		for(int j=1;j<s2.length()-1;j++)
+		for(int j=1;j<str2.length()-1;j++)
 		{
-			int b = (int)s2.charAt(j)+10;
+			int b = (int)str2.charAt(j)+10;
 			if(b>122)
 			{
 				b = 122 - b;
@@ -31,16 +31,16 @@ public class Encrypt {
 					int temp = b * (-1);
 					b = temp + 96;
 				}
-				c[j] = (char)b;
+				ch[j] = (char)b;
 			}
 			else
 			{
-				c[j] = (char)b;
+				ch[j] = (char)b;
 			}
 			
 		}
-		String s3 = new String(c);
-		System.out.print(s3);
+		String str3 = new String(ch);
+		System.out.print(str3);
 
 	}
 
